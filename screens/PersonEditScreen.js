@@ -148,6 +148,30 @@ export default function PersonEditScreen(props) {
           keyboardType="numeric"
           style={{ marginBottom: 16 }}
         />
+        <TextInput
+          label="Zip"
+          value={person.zip}
+          onChangeText={(text) => setPerson({ ...person, zip: text })}
+          mode="outlined"
+          keyboardType="numeric"
+          style={{ marginBottom: 16 }}
+        />
+        <TextInput
+          label="Country"
+          value={person.country}
+          onChangeText={(text) => setPerson({ ...person, country: text })}
+          mode="outlined"
+          keyboardType="numeric"
+          style={{ marginBottom: 16 }}
+        />
+        <TextInput
+          label="State"
+          value={person.state}
+          onChangeText={(text) => setPerson({ ...person, state: text })}
+          mode="outlined"
+          keyboardType="numeric"
+          style={{ marginBottom: 16 }}
+        />
         <Dropdown
           label="Department"
           mode="outlined"
@@ -168,7 +192,11 @@ export default function PersonEditScreen(props) {
         }}
       >
         <View style={{ flex: 1, marginHorizontal: 10 }}>
-          <Button mode="outlined" icon="keyboard-return" onPress={showPeopleView}>
+          <Button
+            mode="outlined"
+            icon="keyboard-return"
+            onPress={showPeopleView}
+          >
             Cancel
           </Button>
         </View>

@@ -83,10 +83,12 @@ export default function PersonViewScreen(props) {
 
       <View style={{ flex: 1, marginTop: 24 }}>
         {[
-          { label: "Name:", value: person.name },
           { label: "Phone:", value: person.phone },
           { label: "Street:", value: person.street },
           { label: "City:", value: person.city },
+          { label: "State:", value: person.state },
+          { label: "Zip:", value: person.zip },
+          { label: "Country:", value: person.country },
           { label: "Department:", value: person.Department?.name },
         ].map(({ label, value }, index) => (
           <View key={index} style={{ marginBottom: 20, paddingHorizontal: 12 }}>
