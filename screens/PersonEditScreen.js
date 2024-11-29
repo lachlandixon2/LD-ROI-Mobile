@@ -30,7 +30,7 @@ import {
   fetchPersonById,
   addPerson,
   updatePerson,
-  fetchPeople,
+  fetchDepartments,
 } from "../utils/api";
 
 export default function PersonEditScreen(props) {
@@ -40,7 +40,7 @@ export default function PersonEditScreen(props) {
 
   const [person, setPerson] = useState({
     name: "",
-    phone: "",
+    phone: '',
     street: "",
     city: "",
     departmentId: 1,
@@ -168,7 +168,7 @@ export default function PersonEditScreen(props) {
         }}
       >
         <View style={{ flex: 1, marginHorizontal: 10 }}>
-          <Button mode="outlined" icon="keyboard-return" onPress={showShopView}>
+          <Button mode="outlined" icon="keyboard-return" onPress={showPeopleView}>
             Cancel
           </Button>
         </View>

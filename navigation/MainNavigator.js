@@ -28,7 +28,7 @@ export default function MainNavigator() {
         name="People"
         component={PeopleNavigator}
         options={{
-          tabBarLabel: "Shop",
+          tabBarLabel: "People",
           tabBarIcon: ({ color, size }) => (
             <MaterialIcons name="shopping-cart" color={color} size={26} />
           ),

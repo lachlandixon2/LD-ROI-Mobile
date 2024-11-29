@@ -119,18 +119,17 @@ export default function PersonViewScreen(props) {
       </View>
 
       <View style={{ padding: 10 }}>
-              <Button
-                mode="contained"
-                icon="keyboard-return"
-                onPress={showShopView}
-                style={{
-                  width: "100%",
-                }}
-              >
-                Go Back
-              </Button>
-            </View>
-      
+        <Button
+          mode="contained"
+          icon="keyboard-return"
+          onPress={showPeopleView}
+          style={{
+            width: "100%",
+          }}
+        >
+          Go Back
+        </Button>
+      </View>
     </Surface>
   );
 }
