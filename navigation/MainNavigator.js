@@ -30,7 +30,8 @@ export default function MainNavigator() {
         options={{
           tabBarLabel: "People",
           tabBarIcon: ({ color, size }) => (
-            <MaterialIcons name="shopping-cart" color={color} size={26} />
+            <MaterialIcons name="people" color={color} size={26} />
+
           ),
         }}
       />

@@ -193,16 +193,12 @@ export default function PersonEditScreen(props) {
         }}
       >
         <View style={{ flex: 1, marginHorizontal: 10 }}>
-          <Button
-            mode="outlined"
-            icon="keyboard-return"
-            onPress={showPeopleView}
-          >
+          <Button mode="outlined" icon="cancel" onPress={showPeopleView}>
             Cancel
           </Button>
         </View>
         <View style={{ flex: 1, marginHorizontal: 10 }}>
-          <Button mode="contained" icon="update" onPress={handleSubmit}>
+          <Button mode="contained" icon="content-save" onPress={handleSubmit}>
             Ok
           </Button>
         </View>

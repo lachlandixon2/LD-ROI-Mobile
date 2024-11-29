@@ -24,31 +24,36 @@ export default function HomeScreen(props) {
       <Text
         variant="headlineLarge"
         style={{
+          fontFamily: "Trebuchet MS",
           marginBottom: 24,
           fontWeight: "bold",
           color: theme.colors.primary,
         }}
       >
-        Hi, John
+        Hi, Lachlan
       </Text>
+      <Divider />
+      <Divider />
+      <Text
+        variant="headlineLarge"
+        style={{
+          fontFamily: "Trebuchet MS",
+          fontSize: 40,
+          fontWeight: "bold",
+          marginVertical: 10,
+          textAlign: "center",
+        }}
+      >
+        ROI Human Resources System
+      </Text>
+      <Divider />
       <Divider />
       <Image
         source={imageIndex.logo}
         resizeMode="contain"
         style={{ width: "300", height: 150, margin: 20 }}
       />
-      <Divider />
-      <Text
-        variant="headlineLarge"
-        style={{
-          fontWeight: "bold",
-          marginVertical: 10,
-          textAlign: "center",
-        }}
-      >
-        ROI HR System
-      </Text>
-      <Divider />
+
       <View
         style={{
           flexDirection: "row",
@@ -57,10 +62,132 @@ export default function HomeScreen(props) {
           paddingVertical: 10,
         }}
       >
-        <Text variant="titleMedium">Remaining Leave Days:</Text>
-        <Text>10</Text>
+        <Text variant="titleMedium">Upcoming Holiday:</Text>
+        <Text>25/12/2024</Text>
       </View>
       <Divider />
+
+      <View style={{ alignItems: "center", marginVertical: 20 }}>
+        {/* Section Header */}
+        <Text
+          variant="titleLarge"
+          style={{
+            textAlign: "center",
+            fontWeight: "bold",
+            color: theme.colors.primary,
+            marginBottom: 10,
+          }}
+        >
+          Announcements
+        </Text>
+
+        {/* Horizontal Cards */}
+        <ScrollView
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          contentContainerStyle={{
+            justifyContent: "center", // Center the content horizontally
+            paddingHorizontal: 10,
+            paddingVertical: 10,
+          }}
+          style={{ width: "100%" }}
+        >
+          {/* Card 1 */}
+          <Card
+            style={{
+              width: 250,
+              marginHorizontal: 10,
+              borderRadius: 10,
+              elevation: 3,
+              backgroundColor: theme.colors.surface,
+              paddingVertical: 20,
+            }}
+          >
+            <Card.Content>
+              <Text variant="titleMedium" style={{ fontWeight: "bold" }}>
+                New Policy
+              </Text>
+              <Text>Updated Leave Policy Available</Text>
+            </Card.Content>
+          </Card>
+
+          {/* Card 2 */}
+          <Card
+            style={{
+              width: 250,
+              marginHorizontal: 10,
+              borderRadius: 10,
+              elevation: 3,
+              backgroundColor: theme.colors.surface,
+              paddingVertical: 20,
+            }}
+          >
+            <Card.Content>
+              <Text variant="titleMedium" style={{ fontWeight: "bold" }}>
+                Staff Meeting
+              </Text>
+              <Text>Friday, 1 PM</Text>
+            </Card.Content>
+          </Card>
+
+          {/* Card 3 */}
+          <Card
+            style={{
+              width: 250,
+              marginHorizontal: 10,
+              borderRadius: 10,
+              elevation: 3,
+              backgroundColor: theme.colors.surface,
+              paddingVertical: 20,
+            }}
+          >
+            <Card.Content>
+              <Text variant="titleMedium" style={{ fontWeight: "bold" }}>
+                Office Closure
+              </Text>
+              <Text>New Year on 01/01/2025</Text>
+            </Card.Content>
+          </Card>
+
+          {/* Card 4 */}
+          <Card
+            style={{
+              width: 250,
+              marginHorizontal: 10,
+              borderRadius: 10,
+              elevation: 3,
+              backgroundColor: theme.colors.surface,
+              paddingVertical: 20,
+            }}
+          >
+            <Card.Content>
+              <Text variant="titleMedium" style={{ fontWeight: "bold" }}>
+                System Maintenance
+              </Text>
+              <Text>Scheduled for 12/12/2024</Text>
+            </Card.Content>
+          </Card>
+
+          <Card
+            style={{
+              width: 250,
+              marginHorizontal: 10,
+              borderRadius: 10,
+              elevation: 3,
+              backgroundColor: theme.colors.surface,
+              paddingVertical: 20,
+            }}
+          >
+            <Card.Content>
+              <Text variant="titleMedium" style={{ fontWeight: "bold" }}>
+                Upcoming Event
+              </Text>
+              <Text>Team-building activity on 15/12/2024</Text>
+            </Card.Content>
+          </Card>
+          
+        </ScrollView>
+      </View>
 
       {/* Spacer View */}
       <View style={{ flex: 1 }} />

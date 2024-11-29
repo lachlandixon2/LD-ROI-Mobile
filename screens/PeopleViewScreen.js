@@ -135,7 +135,7 @@ export default function PeopleViewScreen(props) {
           color: theme.colors.primary,
         }}
       >
-        Staff Directory
+        People Directory
       </Text>
 
       <ScrollView style={{ flex: 1 }}>
@@ -164,7 +164,7 @@ export default function PeopleViewScreen(props) {
                 onPress={() => showViewPerson(person.id)}
                 disabled={offline}
               >
-                <Avatar.Icon size={48} icon="folder-open-outline" />
+                <Avatar.Icon size={48} icon="account-circle" />
               </TouchableOpacity>
             </View>
             <View style={{ flex: 1, marginLeft: 10, padding: 10 }}>
