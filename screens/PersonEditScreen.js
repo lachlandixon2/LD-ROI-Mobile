@@ -40,7 +40,7 @@ export default function PersonEditScreen(props) {
 
   const [person, setPerson] = useState({
     name: "",
-    phone: '',
+    phone: "",
     street: "",
     city: "",
     departmentId: 1,
@@ -53,17 +53,18 @@ export default function PersonEditScreen(props) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const fetchedDepartments = await fetchDepartments();
+        const fetchedDepartments = await fetchDepartments(setOffline);
         setDepartments(fetchedDepartments);
         setSelectedDepartment(fetchedDepartments[0].id);
 
         if (id !== -1) {
-          const data = await fetchPersonById(id);
+          const data = await fetchPersonById(id, setOffline);
           setPerson(data);
           setSelectedDepartment(data.departmentId);
-          console.log(data);
+          console.log("edit person", data);
+          console.log(data.departmentId);
         } else {
-          console.log(person);
+          console.log("new person", person);
         }
       } catch (err) {
         console.error(err);

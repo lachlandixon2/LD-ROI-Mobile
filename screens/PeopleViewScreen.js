@@ -42,7 +42,7 @@ export default function PeopleViewScreen(props) {
 
   const fetchData = async () => {
     try {
-      const data = await fetchPeople();
+      const data = await fetchPeople(setOffline);
       setPeople(data);
     } catch (err) {
       console.error(err);
@@ -108,6 +108,24 @@ export default function PeopleViewScreen(props) {
 
   return (
     <Surface style={{ flex: 1, padding: 16 }}>
+      {/* offline mode */}
+      {offline && (
+        <View
+          style={{
+            backgroundColor: theme.colors.error,
+            alignItems: "center",
+            marginBottom: 10,
+            borderRadius: 5,
+          }}
+        >
+          <Text
+            variant="bodyLarge"
+            style={{ color: theme.colors.onError, paddingVertical: 12 }}
+          >
+            Offline Mode
+          </Text>
+        </View>
+      )}
       <Text
         variant="headlineLarge"
         style={{
@@ -142,7 +160,10 @@ export default function PeopleViewScreen(props) {
               }}
             >
               {/* Avatar */}
-              <TouchableOpacity onPress={() => showViewPerson(person.id)}>
+              <TouchableOpacity
+                onPress={() => showViewPerson(person.id)}
+                disabled={offline}
+              >
                 <Avatar.Icon size={48} icon="folder-open-outline" />
               </TouchableOpacity>
             </View>
@@ -177,6 +198,7 @@ export default function PeopleViewScreen(props) {
                       onPress={() => {
                         showEditPerson(person.id);
                       }}
+                      disabled={offline}
                     />
                   </View>
                   <View
@@ -194,6 +216,7 @@ export default function PeopleViewScreen(props) {
                       onPress={() => {
                         showDialog(person.id, person.name);
                       }}
+                      disabled={offline}
                     />
                   </View>
                 </View>
